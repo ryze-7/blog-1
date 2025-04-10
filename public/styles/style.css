@@ -1,0 +1,98 @@
+body {
+    opacity: 0; /* Initially hide the entire body */
+}
+
+
+.figtree-blogFont {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  header {
+    position: sticky; /* Use sticky positioning as the base */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+    background-color: transparent; /* Initial transparent background */
+    box-shadow: none; /* Initial no shadow */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0); /* Start at the top */
+}
+
+/* Style for when the header is "stuck" (scrolled past its initial position) */
+header.scrolled {
+    background-color: white; /* Or your desired background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transform: translateY(0); /* Ensure it stays at the top when scrolled */
+}
+
+/* Optional: If you want a slight initial upward movement before sticking */
+/* header:not(.scrolled) {
+    transform: translateY(0px);
+} */
+  
+.grey-color {
+    color: #3c4b4d;
+}
+
+
+
+.btn-outline-dark {
+    --bs-btn-color: #212529;
+    --bs-btn-border-color: #212529;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #212529;
+    --bs-btn-hover-border-color: #212529;
+    --bs-btn-focus-shadow-rgb: 33, 37, 41;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #212529;
+    --bs-btn-active-border-color: #212529;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #212529;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #212529;
+    --bs-gradient: none;
+}
+.nav-bar-a-fs {
+    font-size: 2.1vh;
+}
+
+body {
+    margin: 0;
+}
+
+#footer {
+    background-color: #121212;
+}
+
+.image-container {
+    max-height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative; /* Needed for absolute positioning of the overlay */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the filter */
+  }
+  
+  .image-container:hover img {
+    filter: brightness(70%); /* Reduce brightness on hover (adjust value as needed) */
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      max-height: none; /* Remove max-height on smaller screens */
+      height: 120px; /* Keep the fixed height for smaller screens */
+    }
+  }
+  
+
+
