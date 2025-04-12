@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 created blog using node-js and ejs
-=======
+
 To host the website locally, follow these steps;
 
 1.Download all the files and run the terminal on that folder
