@@ -1,5 +1,5 @@
 body {
-    opacity: 0; /* Initially hide the entire body */
+    opacity: 0;
 }
 
 
@@ -11,28 +11,22 @@ body {
   }
 
   header {
-    position: sticky; /* Use sticky positioning as the base */
+    position: sticky; 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
-    background-color: transparent; /* Initial transparent background */
-    box-shadow: none; /* Initial no shadow */
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: none;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(0); /* Start at the top */
+    transform: translateY(0);
 }
 
-/* Style for when the header is "stuck" (scrolled past its initial position) */
 header.scrolled {
-    background-color: white; /* Or your desired background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    transform: translateY(0); /* Ensure it stays at the top when scrolled */
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transform: translateY(0);
 }
-
-/* Optional: If you want a slight initial upward movement before sticking */
-/* header:not(.scrolled) {
-    transform: translateY(0px);
-} */
   
 .grey-color {
     color: #3c4b4d;
@@ -73,26 +67,26 @@ body {
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
-    position: relative; /* Needed for absolute positioning of the overlay */
-  }
+    position: relative; 
   
   .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: filter 0.3s ease-in-out; /* Smooth transition for the filter */
+    transition: filter 0.3s ease-in-out; 
   }
   
   .image-container:hover img {
-    filter: brightness(70%); /* Reduce brightness on hover (adjust value as needed) */
+    filter: brightness(70%); 
   }
+}
   
-  @media (max-width: 768px) {
-    .image-container {
-      max-height: none; /* Remove max-height on smaller screens */
-      height: 120px; /* Keep the fixed height for smaller screens */
-    }
+@media (max-width: 768px) {
+  .image-container {
+    max-height: none;
+     height: 120px; 
   }
+}
   
 
 
