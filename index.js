@@ -4,7 +4,11 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+app.use(express.urlencoded({ extended: true }));
+
+
 app.use(express.static("public"));
+
 
 const now = new Date();
 const currentYear = now.getFullYear();
@@ -21,10 +25,21 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {Date : currentDate, month : currentMonthName, year : currentYear});
 })
 
-
 app.get("/create", (req, res) => {
     res.render("create.ejs");
 })
+
+app.post("/submit", (req, res) => {
+    const title = req.body.title;
+    const content = req.body.content;
+
+    console.log("Received Title:", title);
+    console.log("Received Content:", content);
+
+    res.render("index.ejs", {Date : currentDate, month : currentMonthName, year : currentYear,blogTitle: title, blogContent: content});
+});
+
+
 
 app.listen(port, () => {
     console.log(`Started Port: ${port}`);

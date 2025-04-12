@@ -1,3 +1,20 @@
 <%- include("partials/header.ejs") %>
-<section style="height: 100vh;"></section>
+<section style="background-color: #fcf8f0;">
+    <div class="container py-5 figtree-blogFont">
+        <form action="/submit" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label h5 fw-bold" style="color: #a37e5b;">Enter Title</label>
+                <input type="text" class="form-control" id="blogTitle" name="title">
+            </div>
+            <div class="mb-3 pt-3">
+                <label for="exampleFormControlTextarea1" class="form-label h5 fw-bold" style="color: #a37e5b;">Enter Your Content Here</label>
+                <textarea class="form-control" id="blogContent" rows="3" name="content"></textarea>
+            </div>
+            <div class="d-grid gap-2 pt-5" style="grid-template-columns: 1fr 1fr;">
+                <button class="btn btn-outline-dark" type="button" id="resetButton">Reset Form</button>
+                <button class="btn btn-dark" type="submit">Create Blog</button>
+            </div>
+        </form>
+    </div>
+</section>
 <%- include("partials/footer.ejs") %>
