@@ -13,11 +13,13 @@
       </div>
 </section>
 <section class="blogs" style="min-height: 50vh; padding: 20px;">
+  <div class="container border-top border-bottom">
   <%  if (locals.blogCreated && locals.blogTitle && locals.blogContent) {  %>
     <div class="mt-4">
       <h2><%= blogTitle %></h2>
       <p><%= blogContent %></p>
     </div>
   <%  } %>
+  </div>
 </section>
 <%- include("partials/footer.ejs") %>

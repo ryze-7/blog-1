@@ -36,7 +36,14 @@ app.post("/submit", (req, res) => {
     console.log("Received Title:", title);
     console.log("Received Content:", content);
 
-    res.render("index.ejs", {Date : currentDate, month : currentMonthName, year : currentYear,blogTitle: title, blogContent: content});
+    res.render("index.ejs", {
+        Date : currentDate,
+        month : currentMonthName,
+        year : currentYear,
+        blogTitle: title, 
+        blogContent: content,
+        blogCreated: true
+    });
 });
 
 
